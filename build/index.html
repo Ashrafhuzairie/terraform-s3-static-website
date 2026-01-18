@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Terraform + AWS S3 Static Website Project" />
+    <title>Terraform Static Website • AWS S3</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 2l8 4.6v10.8L12 22l-8-4.6V6.6L12 2z"
+                class="logo-outer"
+              />
+              <path
+                d="M12 6.2l4.8 2.8v5.9L12 17.8l-4.8-2.9V9l4.8-2.8z"
+                class="logo-inner"
+              />
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">Terraform • AWS</span>
+            <span class="brand-subtitle">Static Website on S3</span>
+          </div>
+        </div>
+
+        <nav class="nav" aria-label="Primary">
+          <a href="#overview">Overview</a>
+          <a href="#features">Features</a>
+          <a href="#deploy">Deploy</a>
+          <a class="btn btn-ghost" href="#next">Next Steps</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <div class="pill">
+              <span class="dot" aria-hidden="true"></span>
+              Deployed with Terraform on AWS S3
+            </div>
+
+            <h1>
+              My <span class="grad">first Terraform</span> static website,
+              built like a pro.
+            </h1>
+
+            <p class="lead">
+              This project provisions an S3 bucket configured for static website hosting,
+              and serves this frontend with a clean, responsive, modern UI.
+            </p>
+
+            <div class="hero-cta">
+              <a class="btn btn-primary" href="#deploy">View Deploy Steps</a>
+              <a class="btn btn-secondary" href="#features">See Features</a>
+            </div>
+
+            <div class="mini-stats" aria-label="Project highlights">
+              <div class="stat">
+                <span class="stat-label">Cloud</span>
+                <span class="stat-value">AWS S3</span>
+              </div>
+              <div class="stat">
+                <span class="stat-label">IaC</span>
+                <span class="stat-value">Terraform</span>
+              </div>
+              <div class="stat">
+                <span class="stat-label">Frontend</span>
+                <span class="stat-value">HTML + CSS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-card" role="presentation">
+            <div class="card-top">
+              <div class="card-badge">LIVE</div>
+              <div class="card-title">Infrastructure Summary</div>
+              <div class="card-subtitle">What Terraform creates</div>
+            </div>
+
+            <div class="card-body">
+              <div class="kv">
+                <span class="k">Resource</span>
+                <span class="v">S3 Bucket (Static Website)</span>
+              </div>
+              <div class="kv">
+                <span class="k">Access</span>
+                <span class="v">Public read (website objects)</span>
+              </div>
+              <div class="kv">
+                <span class="k">Outputs</span>
+                <span class="v">Bucket name + Website endpoint</span>
+              </div>
+
+              <div class="codeblock" aria-label="Example terraform output">
+                <pre><code>bucket_name       = "terraform-ashraf-static-website-bd6661f4"
+website_endpoint  = "terraform-ashraf-static-website-bd6661f4.s3-website-ap-southeast-1.amazonaws.com"</code></pre>
+              </div>
+
+              <div class="card-actions">
+                <a class="chip" href="#overview">Docs</a>
+                <a class="chip" href="#deploy">Commands</a>
+                <a class="chip" href="#next">Improvements</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-blur" aria-hidden="true"></div>
+      </section>
+
+      <section id="overview" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Project Overview</h2>
+            <p>
+              A simple, production-style static site meant to pair with your first Terraform AWS project.
+              Use it for your portfolio or as a template for future S3/CloudFront deployments.
+            </p>
+          </div>
+
+          <div class="grid-3">
+            <article class="tile">
+              <h3>Clean UI</h3>
+              <p>Modern spacing, typography, and responsive layout that looks good on mobile and desktop.</p>
+            </article>
+            <article class="tile">
+              <h3>Fast & Lightweight</h3>
+              <p>No frameworks. Just HTML + CSS. Loads quickly and works everywhere.</p>
+            </article>
+            <article class="tile">
+              <h3>Readable Structure</h3>
+              <p>Easy to edit sections for your own name, GitHub links, and Terraform outputs.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="section section-alt">
+        <div class="container">
+          <div class="section-head">
+            <h2>What this site includes</h2>
+            <p>Designed to showcase your AWS + Terraform work in a clean, employer-friendly way.</p>
+          </div>
+
+          <div class="grid-2">
+            <div class="feature">
+              <div class="icon" aria-hidden="true">⚡</div>
+              <div>
+                <h3>Responsive hero layout</h3>
+                <p>Two-column grid on desktop, stacked on mobile, with consistent spacing and alignment.</p>
+              </div>
+            </div>
+
+            <div class="feature">
+              <div class="icon" aria-hidden="true">🎨</div>
+              <div>
+                <h3>Professional styling</h3>
+                <p>Neutral palette, subtle gradients, soft shadows, and accessible contrast.</p>
+              </div>
+            </div>
+
+            <div class="feature">
+              <div class="icon" aria-hidden="true">🧩</div>
+              <div>
+                <h3>Reusable components</h3>
+                <p>Buttons, chips, cards, and tiles you can reuse for more sections.</p>
+              </div>
+            </div>
+
+            <div class="feature">
+              <div class="icon" aria-hidden="true">🔒</div>
+              <div>
+                <h3>Future-ready</h3>
+                <p>Easy to add CloudFront, Route 53, HTTPS, and CI/CD later.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="deploy" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Deploy Steps</h2>
+            <p>Typical Terraform workflow (you can copy into your README.md).</p>
+          </div>
+
+          <div class="steps">
+            <div class="step">
+              <div class="step-num">1</div>
+              <div class="step-body">
+                <h3>Format & init</h3>
+                <pre><code>terraform fmt
+terraform init</code></pre>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-num">2</div>
+              <div class="step-body">
+                <h3>Validate & plan</h3>
+                <pre><code>terraform validate
+terraform plan</code></pre>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-num">3</div>
+              <div class="step-body">
+                <h3>Apply</h3>
+                <pre><code>terraform apply</code></pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="callout">
+            <div>
+              <h3>Tip</h3>
+              <p>
+                If your Terraform uploads these files to S3, keep the folder structure like:
+                <span class="mono">index.html</span> and <span class="mono">styles.css</span>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="next" class="section section-alt">
+        <div class="container">
+          <div class="section-head">
+            <h2>Next Steps (upgrade path)</h2>
+            <p>If you want this to look even more “real production”, add these later.</p>
+          </div>
+
+          <div class="timeline">
+            <div class="milestone">
+              <h3>CloudFront + HTTPS</h3>
+              <p>Add CloudFront distribution + ACM certificate for HTTPS + caching.</p>
+            </div>
+            <div class="milestone">
+              <h3>Route 53 domain</h3>
+              <p>Map a custom domain like <span class="mono">portfolio.yourdomain.com</span>.</p>
+            </div>
+            <div class="milestone">
+              <h3>CI/CD</h3>
+              <p>GitHub Actions to upload site files to S3 automatically on push.</p>
+            </div>
+          </div>
+
+          <div class="footer-cta">
+            <a class="btn btn-primary" href="#overview">Back to Top</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  <footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <span class="mono">Terraform Static Website</span>
+      <span class="muted">• AWS S3</span>
+    </div>
+
+    <div class="footer-right">
+      <span class="muted">
+        © </span> Ashraf Huzairie. All rights reserved.
+      </span>
+    </div>
+  </div>
+</footer>
+
+

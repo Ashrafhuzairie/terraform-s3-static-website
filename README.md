@@ -100,7 +100,7 @@ It is designed as a beginner-friendly Infrastructure-as-Code (IaC) project, suit
 
 ## Access the Website
 
-- static_website_endpoint = http://terraform-ashraf-static-website-xxxx.s3-website-ap-southeast-1.amazonaws.com
+- static_website_endpoint = http://terraform-ashraf-static-website-bd6661f4.s3-website-ap-southeast-1.amazonaws.com/#deploy
 
 ## Cleanup (Destroy Resources)
 
